@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.containerBoxesCategories{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /*margen al contenido */
+  margin: 1em;
+}
+
+  .containerBoxesCategories .boxCategory img{
+      width: 100%;
+  }
+
+  select,input,button{
+    border: solid 1px #ccc;
+    border-radius: .5em;
+    outline: none;
+    padding: 4px;
+}
+button{
+    cursor: pointer;
+}
+body{
+    margin: 0;
+}
+
+
+.toggleTheme header{
+  background-color: #B71C1C;
+}
+.toggleTheme header .containerBtnAdd .btnAdd {
+  background-color:white;
+  color:#B71C1C;
+  box-shadow: 3px 2px 4px black;
+;
+}
+.toggleTheme .containerBoxesCategories h1{
+  color: #B71C1C
+;
+}
+.toggleTheme .containerBoxesCategories .boxCategory h3{
+  color: #B71C1C
+;
+}
+.toggleTheme .containerBoxesCategories .boxCategory  .showMore{
+  background-color:#B71C1C;
+  color:white;
+;
+}
+.toggleTheme footer{
+  background-color: #B71C1C
+;
+}
+
+.FormAdd{
+  display: none;
+}
