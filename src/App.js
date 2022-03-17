@@ -11,7 +11,7 @@ import Drones from "../src/img/drones.jpg";
 import Sonido from "../src/img/sonido.jpg";
 import Video from "../src/img/video.jpg";
 import Perifericos from "../src/img/perifericos.jpg";
- 
+
 import Maps from "./components/googlemaps/Maps";
 
 function App() {
@@ -44,8 +44,8 @@ function App() {
           <Card titulo={item.title} image={item.image} key={idx}></Card>
         ))}
       </section>
-      <div className="main-wrapper">
-        <Maps/>
+      <div className="maps-container">
+        <Maps />
       </div>
       <Footer />
     </div>

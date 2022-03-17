@@ -17,10 +17,10 @@ import {
   ComboboxOption,
 } from "@reach/combobox";
 import { formatRelative } from "date-fns";
-
+import compass from "../../img/compass.svg";
 import "@reach/combobox/styles.css";
 
-import "./map.css"
+import "./map.css";
 const libraries = ["places"];
 const mapContainerStyle = {
   height: "600px",
@@ -37,7 +37,7 @@ const center = {
 
 export default function Maps() {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyDjebjZkyEAKWG0OHBCZG2jg_luLCGQfuk',
+    googleMapsApiKey: "AIzaSyDjebjZkyEAKWG0OHBCZG2jg_luLCGQfuk",
     libraries,
   });
   const [markers, setMarkers] = React.useState([]);
@@ -69,13 +69,6 @@ export default function Maps() {
 
   return (
     <div>
-      <h1>
-        Bears{" "}
-        <span role="img" aria-label="tent">
-          ⛺️
-        </span>
-      </h1>
-
       <Locate panTo={panTo} />
       <Search panTo={panTo} />
 
@@ -114,11 +107,11 @@ export default function Maps() {
             <div>
               <h2>
                 <span role="img" aria-label="bear">
-                  🐻
+                  📌
                 </span>{" "}
-                Alert
+                Tu marca
               </h2>
-              <p>Spotted {formatRelative(selected.time, new Date())}</p>
+              <p>{formatRelative(selected.time, new Date())}</p>
             </div>
           </InfoWindow>
         ) : null}
@@ -143,7 +136,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="/compass.svg" alt="compass" />
+      <img src={compass} alt="compass" />
     </button>
   );
 }
@@ -161,8 +154,6 @@ function Search({ panTo }) {
       radius: 100 * 1000,
     },
   });
-
-  // https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service#AutocompletionRequest
 
   const handleInput = (e) => {
     setValue(e.target.value);
@@ -188,7 +179,7 @@ function Search({ panTo }) {
           value={value}
           onChange={handleInput}
           disabled={!ready}
-          placeholder="Search your location"
+          placeholder="Buscar en Google Maps"
         />
         <ComboboxPopover>
           <ComboboxList>
